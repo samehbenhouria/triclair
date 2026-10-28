@@ -149,6 +149,21 @@
 
     renderStats();
 
+    // Demo mode: #demo-<sample-index>-<condition> auto-runs one sample once
+    // the model is ready (used for the demo video and reproducible judging).
+    var demo = /^#demo-(\d)-(clean|soiled|broken)$/.exec(location.hash || '');
+    if (demo) {
+      var radio = document.querySelector('input[name="condition"][value="' + demo[2] + '"]');
+      if (radio) radio.checked = true;
+      var checkReady = setInterval(function () {
+        if (model) {
+          clearInterval(checkReady);
+          var fig = document.querySelectorAll('#samples figure')[+demo[1]];
+          if (fig) setPreview(SAMPLES[+demo[1]].file, classifyImage);
+        }
+      }, 500);
+    }
+
     // Load MobileNet (global `mobilenet` from the pinned CDN script tags).
     if (window.mobilenet) {
       window.mobilenet.load().then(function (m) {
