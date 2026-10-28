@@ -6,7 +6,7 @@
   var JOURNAL_KEY = 'triclair.journal.v1';
   var SAMPLES = [
     { file: 'samples/plastic-bottle.jpg', caption: 'Plastic bottle' },
-    { file: 'samples/pizza.jpg', caption: 'Pizza (box)' },
+    { file: 'samples/beer-bottles.jpg', caption: 'Beer bottles' },
     { file: 'samples/banana.jpg', caption: 'Banana' },
     { file: 'samples/cell-phone.jpg', caption: 'Cell phone' },
     { file: 'samples/unknown.jpg', caption: 'Unknown object' }

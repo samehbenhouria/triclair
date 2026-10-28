@@ -24,8 +24,9 @@ photo ever leaves the device.
 
 1. Click a sample photo, or upload your own:
    - **Plastic bottle** → Blue bin (recycling), rule cited.
-   - **Pizza** → set condition **Soiled** → Brown bin (compost); set it back to
-     **Clean** → Blue bin. The condition is what decides — so TriClair asks.
+   - **Beer bottles (glass)** → Blue bin; now set condition **Broken** → Grey
+     bin, wrapped and labelled: broken glass never goes loose in the blue bin.
+     The condition is what decides — so TriClair asks.
    - **Banana** → Brown bin (compost).
    - **Cell phone** → Ecocentre drop-off.
    - **Teddy bear ("unknown")** → **Uncertain** verdict + manual material
