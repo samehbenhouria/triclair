@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TriClair — Sort your waste right, in Longueuil</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>♻️ TriClair</h1>
+  <p class="tagline">Take a photo of an item. Get the right bin for Longueuil, Québec —
+     with the local rule that explains why. When TriClair is not sure, it says so.</p>
+</header>
+
+<main>
+  <section class="card" id="impact">
+    <h2>📊 Impact journal</h2>
+    <div class="stats">
+      <div><strong id="stat-total">0</strong><span>items sorted</span></div>
+      <div><strong id="stat-recycling">0</strong><span>🔵 recycling</span></div>
+      <div><strong id="stat-compost">0</strong><span>🟤 compost</span></div>
+      <div><strong id="stat-garbage">0</strong><span>⚫ garbage</span></div>
+      <div><strong id="stat-ecocentre">0</strong><span>🟠 ecocentre</span></div>
+      <div><strong id="stat-uncertain-rate">—</strong><span>uncertain rate</span></div>
+    </div>
+    <div class="row">
+      <button id="export-btn" type="button">Export journal (JSON)</button>
+      <button id="reset-btn" type="button" class="danger">Reset</button>
+    </div>
+    <p class="note">Stored only in your browser (localStorage). The uncertain rate is a feature,
+       not a failure: it counts the guesses TriClair refused to make.</p>
+  </section>
+
+  <section class="card">
+    <h2>📷 1. Photo</h2>
+    <p id="model-status" class="note">Loading the on-device photo model…</p>
+    <label class="file-btn">Choose or take a photo
+      <input id="photo-input" type="file" accept="image/*" hidden>
+    </label>
+    <div id="samples" class="samples"></div>
+    <img id="preview" alt="Selected item preview" hidden>
+    <h2>🧺 2. What state is it in?</h2>
+    <div class="row" role="radiogroup" aria-label="Item condition">
+      <label><input type="radio" name="condition" value="clean" checked> Clean / empty</label>
+      <label><input type="radio" name="condition" value="soiled"> Soiled (food / grease)</label>
+      <label><input type="radio" name="condition" value="broken"> Broken / torn</label>
+    </div>
+    <p class="note">Condition changes the answer: a clean pizza box is recycled,
+       a greasy one is composted — and broken glass never goes in the blue bin.</p>
+    <div id="verdict" class="verdict" hidden></div>
+  </section>
+
+  <section class="card">
+    <h2>✋ No photo? Pick the material</h2>
+    <div class="row">
+      <select id="material-select" aria-label="Material"></select>
+      <button id="material-btn" type="button">Where does it go?</button>
+    </div>
+    <div id="manual-verdict" class="verdict" hidden></div>
+  </section>
+</main>
+
+<footer>
+  <p>Rules simplified from the City of Longueuil / Montréal-area curbside guidance — always
+     check your city's official waste guide for edge cases. Classification runs 100% in your
+     browser (TensorFlow.js + MobileNet); no photo ever leaves your device.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.20.0/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.1/dist/mobilenet.min.js"></script>
+<script src="rules.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
