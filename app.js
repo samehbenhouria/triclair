@@ -91,7 +91,15 @@
 
   function setPreview(src, onReady) {
     var img = $('preview');
+    var retried = false;
     img.onload = function () { currentImg = img; if (onReady) onReady(img); };
+    img.onerror = function () {
+      // One retry with a cache-buster: a single transient network failure
+      // must not silently kill the classification (seen on slow networks).
+      if (retried) return;
+      retried = true;
+      setTimeout(function () { img.src = src + (src.indexOf('?') >= 0 ? '&' : '?') + 'retry=1'; }, 1500);
+    };
     img.src = src;
     img.hidden = false;
   }
