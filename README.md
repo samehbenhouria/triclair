@@ -15,9 +15,10 @@ python3 -m http.server 8000
 # open http://localhost:8000
 ```
 
-Any static file server works. An internet connection is needed once to load
-the pinned classification libraries from CDN; after that, classification runs
-**100% in your browser** — no photo ever leaves the device.
+Any static file server works. **No internet connection is needed at all**: the
+classification libraries and the model weights are vendored in this repo
+(`vendor/`, `model/`), and classification runs **100% in your browser** — no
+photo ever leaves the device.
 
 ## Try the demo path
 
@@ -45,9 +46,10 @@ the pinned classification libraries from CDN; after that, classification runs
 | `samples/` | Demo photos (see `samples/CREDITS.md`) |
 
 Classification: TensorFlow.js **4.20.0** + MobileNet **2.1.1**
-(`@tensorflow-models/mobilenet`), pinned on jsDelivr. The model's top label is
-mapped to a waste item; below **35% confidence**, or for an unmapped label, the
-verdict is *Uncertain* by design.
+(`@tensorflow-models/mobilenet`, MobileNet v2 1.0/224 weights), **vendored**
+in `vendor/` + `model/` (Apache-2.0, © Google — see the license headers in the
+vendored files). The model's top label is mapped to a waste item; below **35%
+confidence**, or for an unmapped label, the verdict is *Uncertain* by design.
 
 Rules encode Longueuil / Montréal-area curbside guidance, including the traps
 that cause real contamination:

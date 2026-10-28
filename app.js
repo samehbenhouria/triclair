@@ -164,16 +164,17 @@
       }, 500);
     }
 
-    // Load MobileNet (global `mobilenet` from the pinned CDN script tags).
+    // Load MobileNet from the vendored copy + local weights (see vendor/ and
+    // model/ in the repo): fully self-contained, no CDN, works offline.
     if (window.mobilenet) {
-      window.mobilenet.load().then(function (m) {
+      window.mobilenet.load({ modelUrl: 'model/model.json' }).then(function (m) {
         model = m;
         $('model-status').textContent = 'Photo model ready — everything runs on your device.';
       }).catch(function () {
-        $('model-status').textContent = 'Photo model failed to load (offline?). Manual picker still works.';
+        $('model-status').textContent = 'Photo model failed to load. Manual picker still works.';
       });
     } else {
-      $('model-status').textContent = 'Photo model unavailable (CDN offline?). Manual picker still works.';
+      $('model-status').textContent = 'Photo model unavailable. Manual picker still works.';
     }
   }
 
