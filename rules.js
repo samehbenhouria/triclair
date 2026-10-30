@@ -105,17 +105,41 @@
     other: null
   };
 
-  // MobileNet / ImageNet label -> item key. Checked in order; first match wins.
+  // MobileNet / ImageNet label -> item key.
+  //
+  // TOKEN-PHRASE matching with boundaries (jury externe pass 1, J4 — this
+  // replaced raw substring matching on 2026-10-30). A rule phrase matches
+  // only when its full token sequence appears contiguously inside ONE
+  // comma-separated segment of the label. Substring matching silently
+  // misfiled real labels: 'cup' fired inside unrelated words, 'can opener'
+  // was filed as a metal can, 'crate' as a cardboard box, 'vase' as a glass
+  // bottle. In doubt there is NO match, and the photo path answers
+  // "uncertain" — that refusal is the product's core promise.
+  //
+  // Deliberate NON-matches (each reviewed case by case, jury J4):
+  // - 'can opener' (NO_MATCH_LABELS below): a durable kitchen tool, not a
+  //   can. Filing it as metal_can was the jury's exhibit A.
+  // - bare 'cup' and 'measuring cup': "cup" alone does not say WHAT cup.
+  //   'coffee mug' and 'espresso' ARE kept -> coffee_cup: a take-out coffee
+  //   photo classifies as one of those, and both a plastic-lined paper cup
+  //   and a discarded ceramic mug land in Longueuil's grey bin (neither is
+  //   blue-bin material), so the bin is right either way.
+  // - 'beer glass', 'wine glass', 'goblet', 'vase': table glass and vases
+  //   are NOT container glass. Longueuil and Montréal accept only glass
+  //   bottles and jars in the blue bin; table glass/ceramics have a
+  //   different melting point and are refused. No match -> uncertain, and
+  //   the manual glass picker lets the user say "bottle/jar" explicitly.
+  // - 'crate': a reusable wood/plastic container, not a cardboard box.
+  var NO_MATCH_LABELS = ['can opener'];
+
   var LABEL_RULES = [
     ['beer bottle', 'glass_bottle'], ['wine bottle', 'glass_bottle'],
-    ['beer glass', 'glass_bottle'], ['wine glass', 'glass_bottle'],
-    ['goblet', 'glass_bottle'], ['vase', 'glass_bottle'],
     ['water bottle', 'plastic_bottle'], ['pop bottle', 'plastic_bottle'],
     ['soda bottle', 'plastic_bottle'], ['pill bottle', 'plastic_bottle'],
     ['plastic bottle', 'plastic_bottle'], ['bottle', 'plastic_bottle'],
     ['pizza', 'pizza_box'],
-    ['coffee cup', 'coffee_cup'], ['cup', 'coffee_cup'], ['espresso', 'coffee_cup'],
-    ['coffee mug', 'coffee_cup'], ['mug', 'coffee_cup'],
+    ['coffee cup', 'coffee_cup'], ['espresso', 'coffee_cup'],
+    ['coffee mug', 'coffee_cup'],
     ['plastic bag', 'plastic_film'], ['shopping bag', 'plastic_film'],
     ['banana', 'food_scraps'], ['orange', 'food_scraps'], ['lemon', 'food_scraps'],
     ['granny smith', 'food_scraps'], ['apple', 'food_scraps'], ['fig', 'food_scraps'],
@@ -127,8 +151,8 @@
     ['notebook computer', 'electronics'], ['ipod', 'electronics'],
     ['remote control', 'electronics'], ['computer mouse', 'electronics'],
     ['computer keyboard', 'electronics'], ['hand-held computer', 'electronics'],
-    ['tin can', 'metal_can'], ['can opener', 'metal_can'], ['pop can', 'metal_can'],
-    ['carton', 'cardboard'], ['crate', 'cardboard'],
+    ['tin can', 'metal_can'], ['pop can', 'metal_can'],
+    ['carton', 'cardboard'],
     ['comic book', 'paper'], ['book jacket', 'paper'], ['paper towel', 'paper'],
     ['toilet tissue', 'paper'], ['envelope', 'paper'],
     ['jersey', 'textile'], ['t-shirt', 'textile'], ['tee shirt', 'textile'],
@@ -160,11 +184,51 @@
     };
   }
 
+  function labelTokens(text) {
+    return String(text).toLowerCase().split(/[^a-z0-9]+/)
+      .filter(function (t) { return t.length > 0; });
+  }
+
+  // True when the phrase's token sequence appears contiguously in tokens.
+  function phraseInTokens(phraseTokens, tokens) {
+    if (!phraseTokens.length || phraseTokens.length > tokens.length) return false;
+    for (var i = 0; i + phraseTokens.length <= tokens.length; i++) {
+      var ok = true;
+      for (var j = 0; j < phraseTokens.length; j++) {
+        if (tokens[i + j] !== phraseTokens[j]) { ok = false; break; }
+      }
+      if (ok) return true;
+    }
+    return false;
+  }
+
+  // Pre-tokenized rules and exclusions (label matching is token-based, J4).
+  var LABEL_RULE_TOKENS = LABEL_RULES.map(function (r) {
+    return { tokens: labelTokens(r[0]), item: r[1] };
+  });
+  var NO_MATCH_TOKENS = NO_MATCH_LABELS.map(labelTokens);
+
   function itemForLabel(label) {
     if (!label) return null;
-    var text = String(label).toLowerCase();
-    for (var i = 0; i < LABEL_RULES.length; i++) {
-      if (text.indexOf(LABEL_RULES[i][0]) !== -1) return LABEL_RULES[i][1];
+    var segments = String(label).toLowerCase().split(',')
+      .map(labelTokens)
+      .filter(function (t) { return t.length > 0; });
+    if (!segments.length) return null;
+    var s, i;
+    // Explicit exclusions win over every rule (e.g. 'can opener').
+    for (s = 0; s < segments.length; s++) {
+      for (i = 0; i < NO_MATCH_TOKENS.length; i++) {
+        if (phraseInTokens(NO_MATCH_TOKENS[i], segments[s])) return null;
+      }
+    }
+    // Rules in declared order (specific phrases before generic ones);
+    // a phrase must match inside a single label segment, on token boundaries.
+    for (i = 0; i < LABEL_RULE_TOKENS.length; i++) {
+      for (s = 0; s < segments.length; s++) {
+        if (phraseInTokens(LABEL_RULE_TOKENS[i].tokens, segments[s])) {
+          return LABEL_RULE_TOKENS[i].item;
+        }
+      }
     }
     return null;
   }

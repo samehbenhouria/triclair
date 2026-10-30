@@ -67,25 +67,30 @@
   }
 
   // --- Photo classification ---------------------------------------------------
+  // Model-outage path (comité interne m-4): the verdict is SHOWN but NOT
+  // journaled. A model that failed to load is not a sorting decision; logging
+  // an "uncertain" for every attempted photo polluted the impact journal and
+  // its uncertain rate with infrastructure failures.
+  function showModelDownVerdict() {
+    var v = R.fromLabel('', null, condition());
+    showVerdict($('verdict'), v, '🤔 Not sure');
+    $('verdict').insertAdjacentHTML('beforeend',
+      '<p><strong>Note:</strong> the photo model is unavailable (offline?). ' +
+      'The manual picker below works without it. ' +
+      'This failure is not counted in the impact journal.</p>');
+  }
+
   function classifyImage(img) {
-    if (!model) {
-      handleVerdict(R.fromLabel('', null, condition()), 'photo');
-      $('verdict').insertAdjacentHTML('beforeend',
-        '<p><strong>Note:</strong> the photo model is unavailable (offline?). ' +
-        'The manual picker below works without it.</p>');
-      return;
-    }
+    if (!model) { showModelDownVerdict(); return; }
     $('verdict').hidden = false;
     $('verdict').className = 'verdict uncertain';
     $('verdict').innerHTML = '<p>Classifying…</p>';
     model.classify(img).then(function (preds) {
       var top = preds && preds[0];
-      var v = top
-        ? R.fromLabel(top.className, top.probability, condition())
-        : R.fromLabel('', null, condition());
-      handleVerdict(v, 'photo');
+      if (!top) { showModelDownVerdict(); return; }
+      handleVerdict(R.fromLabel(top.className, top.probability, condition()), 'photo');
     }).catch(function () {
-      handleVerdict(R.fromLabel('', null, condition()), 'photo');
+      showModelDownVerdict();
     });
   }
 
