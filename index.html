@@ -1,70 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TriClair — Sort your waste right, in Longueuil</title>
+<title>TriClair — Triez vos déchets comme il faut, au Québec</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
   <h1>♻️ TriClair</h1>
-  <p class="tagline">Take a photo of an item. Get the right bin for Longueuil, Québec —
-     with the local rule that explains why. When TriClair is not sure, it says so.</p>
+  <p class="tagline" id="tagline">Prenez une photo d'un objet. Obtenez le bon bac pour votre ville,
+     au Québec — avec la règle locale qui explique pourquoi. Quand TriClair n'est pas sûr, il le dit.</p>
+  <div class="prefs">
+    <span>
+      <label id="city-label" for="city-select">Ville :</label>
+      <select id="city-select">
+        <option value="longueuil">Longueuil</option>
+        <option value="montreal">Montréal</option>
+      </select>
+    </span>
+    <span class="langs" role="group" aria-label="Language / Langue">
+      <button id="lang-fr" type="button">FR</button><button id="lang-en" type="button">EN</button>
+    </span>
+  </div>
 </header>
 
 <main>
   <section class="card" id="impact">
-    <h2>📊 Impact journal</h2>
+    <h2 id="impact-title">📊 Journal d'impact</h2>
     <div class="stats">
-      <div><strong id="stat-total">0</strong><span>items sorted</span></div>
-      <div><strong id="stat-recycling">0</strong><span>🔵 recycling</span></div>
-      <div><strong id="stat-compost">0</strong><span>🟤 compost</span></div>
-      <div><strong id="stat-garbage">0</strong><span>⚫ garbage</span></div>
-      <div><strong id="stat-ecocentre">0</strong><span>🟠 ecocentre</span></div>
-      <div><strong id="stat-uncertain-rate">—</strong><span>uncertain rate</span></div>
+      <div><strong id="stat-total">0</strong><span id="stat-total-label">objets triés</span></div>
+      <div><strong id="stat-recycling">0</strong><span id="stat-recycling-label">🔵 recyclage</span></div>
+      <div><strong id="stat-compost">0</strong><span id="stat-compost-label">🟤 compost</span></div>
+      <div><strong id="stat-garbage">0</strong><span id="stat-garbage-label">⚫ ordures</span></div>
+      <div><strong id="stat-ecocentre">0</strong><span id="stat-ecocentre-label">🟠 écocentre</span></div>
+      <div><strong id="stat-uncertain-rate">—</strong><span id="stat-uncertain-label">taux d'incertain</span></div>
     </div>
     <div class="row">
-      <button id="export-btn" type="button">Export journal (JSON)</button>
-      <button id="reset-btn" type="button" class="danger">Reset</button>
+      <button id="export-btn" type="button">Exporter le journal (JSON)</button>
+      <button id="reset-btn" type="button" class="danger">Réinitialiser</button>
     </div>
-    <p class="note">Stored only in your browser (localStorage). The uncertain rate is a feature,
-       not a failure: it counts the guesses TriClair refused to make.</p>
+    <p class="note" id="impact-note">Stocké seulement dans votre navigateur (localStorage). Le taux d'incertain est une fonction,
+       pas un échec : il compte les réponses que TriClair a refusé de deviner.</p>
   </section>
 
   <section class="card">
-    <h2>📷 1. Photo</h2>
-    <p id="model-status" class="note">Loading the on-device photo model…</p>
-    <label class="file-btn">Choose or take a photo
+    <h2 id="photo-title">📷 1. Photo</h2>
+    <p id="model-status" class="note">Chargement du modèle photo sur l'appareil…</p>
+    <label class="file-btn"><span id="photo-btn-label">Choisir ou prendre une photo</span>
       <input id="photo-input" type="file" accept="image/*" hidden>
     </label>
     <div id="samples" class="samples"></div>
-    <img id="preview" alt="Selected item preview" hidden>
-    <h2>🧺 2. What state is it in?</h2>
+    <img id="preview" alt="Aperçu de l'objet choisi" hidden>
+    <h2 id="condition-title">🧺 2. Dans quel état est-il ?</h2>
     <div class="row" role="radiogroup" aria-label="Item condition">
-      <label><input type="radio" name="condition" value="clean" checked> Clean / empty</label>
-      <label><input type="radio" name="condition" value="soiled"> Soiled (food / grease)</label>
-      <label><input type="radio" name="condition" value="broken"> Broken / torn</label>
+      <label><input type="radio" name="condition" value="clean" checked> <span id="cond-clean-label">Propre / vide</span></label>
+      <label><input type="radio" name="condition" value="soiled"> <span id="cond-soiled-label">Souillé (nourriture / graisse)</span></label>
+      <label><input type="radio" name="condition" value="broken"> <span id="cond-broken-label">Brisé / déchiré</span></label>
     </div>
-    <p class="note">Condition changes the answer: a clean pizza box is recycled,
-       a greasy one is composted — and broken glass never goes in the blue bin.</p>
+    <p class="note" id="condition-note">L'état change la réponse : une boîte de pizza propre est recyclée,
+       une graisseuse est compostée — et le verre brisé ne va jamais au bac de récupération.</p>
     <div id="verdict" class="verdict" hidden></div>
   </section>
 
   <section class="card">
-    <h2>✋ No photo? Pick the material</h2>
+    <h2 id="manual-title">✋ Pas de photo ? Choisissez la matière</h2>
     <div class="row">
       <select id="material-select" aria-label="Material"></select>
-      <button id="material-btn" type="button">Where does it go?</button>
+      <button id="material-btn" type="button">Où ça va ?</button>
     </div>
     <div id="manual-verdict" class="verdict" hidden></div>
   </section>
 </main>
 
 <footer>
-  <p>Rules simplified from the City of Longueuil / Montréal-area curbside guidance — always
-     check your city's official waste guide for edge cases. Classification runs 100% in your
-     browser (TensorFlow.js + MobileNet); no photo ever leaves your device.</p>
+  <p id="footer-text">Règles simplifiées à partir des guides officiels des villes de Longueuil et de Montréal — vérifiez
+     toujours le guide officiel de votre ville pour les cas limites. La classification roule à 100 % dans votre
+     navigateur (TensorFlow.js + MobileNet) ; aucune photo ne quitte votre appareil.</p>
 </footer>
 
 <script src="vendor/tf.min.js"></script>

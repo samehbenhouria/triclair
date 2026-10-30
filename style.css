@@ -34,3 +34,9 @@ select { font-size: 1rem; padding: .5rem; border-radius: 8px; }
 .verdict.ecocentre { background: #ffe8cc; border-left: 6px solid #e65100; }
 .verdict.uncertain { background: #fff3cd; border-left: 6px solid #f9a825; }
 footer { max-width: 46rem; margin: 0 auto 2rem; padding: 0 1rem; color: #555; font-size: .85rem; }
+.prefs { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: center; margin-top: .9rem; }
+.prefs label { font-weight: 600; }
+.prefs select { padding: .35rem .5rem; }
+.prefs .langs button { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.65);
+  padding: .35rem .75rem; border-radius: 8px; }
+.prefs .langs button.active { background: #fff; color: #1e6b34; font-weight: 700; }
