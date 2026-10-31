@@ -1,40 +1,37 @@
-# Screenshots — status and measured verdicts
+# Screenshots — real verdicts, current French interface
 
-**Status (2026-10-30): no fresh captures of the current interface are
-committed here, on purpose.** The interface changed on 2026-10-30
-(French by default, city selector, Montréal rule set). The only captures
-in existence predate that change (English UI, project workspace
-`video/frames/`, 2026-10-28) and are **not** republished here: showing
-the old UI as the current one would misrepresent the product. The
-current interface is live and judgeable at
-https://samehbenhouria.github.io/triclair/.
+Captured **2026-10-31** on the deployed app
+(https://samehbenhouria.github.io/triclair/) with the project's
+`video/capture_shots.py` (headless Chromium, demo mode), after the
+interface became French-by-default with the city selector. Every
+confidence below is the value the page itself displayed at capture
+time — and each one reproduces the figure first measured on
+2026-10-28, to the point.
 
-Fresh captures are produced by `video/capture_shots.py` (project
-workspace), already adapted to the bilingual UI (it waits out both
-"Classifying…" and "Classification en cours…"). Its 2026-10-30 run is
-documented in `eval/SESSION_USAGE.md`: the VM's Chromium currently
-refuses to start without the platform browser-daemon's WebGL policy, so
-the capture is queued for the first browser-capable session before the
-2026-12-21 deadline, in this order: home (French default + city
-selector), bottle verdict, glass clean, glass broken, banana, phone,
-unknown, impact panel, plus one Montréal verdict (coffee cup →
-recycling).
+| File | What it shows | Measured verdict |
+|---|---|---|
+| `frame_00_home.png` | Home, French default, city selector (Longueuil), FR/EN toggle, model ready | — |
+| `frame_01_bottle.png` | Plastic bottle sample | **Recyclage** — « water bottle », 73 % |
+| `frame_02_glass_clean.png` | Beer bottles, condition Propre | **Recyclage** — « beer bottle », 78 % |
+| `frame_03_glass_broken.png` | Beer bottles, condition Brisé | **Ordures** (emballé — règle de sécurité) — « beer bottle », 78 % |
+| `frame_04_banana.png` | Banana sample | **Compost** — « banana », 96 % |
+| `frame_05_phone.png` | Cell phone sample | **Écocentre** — « cellular telephone », 91 % |
+| `frame_06_unknown.png` | Teddy bear sample | **Incertain** + sélecteur manuel — « teddy, teddy bear » non reconnu, 98 % |
+| `frame_07_impact.png` | Impact panel of the capture profile | 12 objets triés (deux séquences de démo complètes, 2026-10-28 + 2026-10-31, dans le même profil persistant) : recyclage 4, compost 2, ordures 2, écocentre 2, taux d'incertain 17 % |
+| `montreal_coffee.png` | **Montréal** selected; a real coffee-cup photo (from the evaluation set) fed through the file input | **Incertain** — confiance 29 % < 35 %; le texte de repli nomme le guide des déchets **de Montréal** (la ville est propagée partout, y compris dans le refus honnête) |
 
-## Measured demo verdicts (live app, 2026-10-28, pre-correction UI)
+Notes, plainly:
 
-These are real outputs of the deployed app on its built-in samples —
-the demo flow and samples are unchanged by the corrections:
-
-| Sample | Verdict | Model label | Confidence |
-|---|---|---|---|
-| Plastic bottle | Recycling | water bottle | 73 % |
-| Beer bottles, clean | Recycling | beer bottle | 78 % |
-| Beer bottles, broken | Garbage (wrapped — safety rule) | beer bottle | 78 % |
-| Banana | Compost | banana | 96 % |
-| Cell phone | Ecocentre | cellular telephone | 91 % |
-| Teddy bear | Uncertain + manual picker | (unmapped) | 98 % |
-
-Demo impact panel after those six: 6 items sorted, uncertain rate 17 %
-(1 of 6) — a curated-samples figure; the uncurated real-photo rates are
-in `eval/RESULTS.md` and are very different. Both are published; neither
-is hidden.
+- The demo panel's 17 % uncertain rate is a curated-samples figure.
+  The uncurated real-photo rates are in `eval/RESULTS.md` (81.7 %
+  uncertain) and the documented UI session in `eval/SESSION_USAGE.md`
+  (13 of 15 uncertain). All three are published; none is hidden.
+- The Montréal coffee-cup shot shows an *uncertain*, not the
+  cup → recycling rule: on that photo the model stopped at 29 %. The
+  Montréal differences themselves (cup, film, styrofoam tray) are
+  proven by the 805-assertion test suite against the sourced rule
+  data, and the selector's effect is visible in the frame (city name
+  propagated into the verdict text).
+- Capture history: a first capture attempt on 2026-10-30 failed
+  (platform WebGL policy gate); the gate's resolution is recorded in
+  `eval/SESSION_USAGE.md`.

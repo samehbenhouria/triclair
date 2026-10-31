@@ -1,0 +1,2162 @@
+{
+  "plastic_bottle__7981599.jpg": {
+    "file": "plastic_bottle__7981599.jpg",
+    "expected_item": "plastic_bottle",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "bottlecap",
+        "p": 0.277
+      },
+      {
+        "label": "pop bottle, soda bottle",
+        "p": 0.2402
+      },
+      {
+        "label": "beer bottle",
+        "p": 0.1952
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.277
+    },
+    "expected_bin": "recycling",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "food_scraps__7512979.jpg": {
+    "file": "food_scraps__7512979.jpg",
+    "expected_item": "food_scraps",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "iron, smoothing iron",
+        "p": 0.0554
+      },
+      {
+        "label": "dumbbell",
+        "p": 0.0543
+      },
+      {
+        "label": "vacuum, vacuum cleaner",
+        "p": 0.036
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.0554
+    },
+    "expected_bin": "compost",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "cardboard__11781094.jpg": {
+    "file": "cardboard__11781094.jpg",
+    "expected_item": "cardboard",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "carton",
+        "p": 0.2425
+      },
+      {
+        "label": "packet",
+        "p": 0.1244
+      },
+      {
+        "label": "matchstick",
+        "p": 0.0635
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.2425
+    },
+    "expected_bin": "recycling",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "correct",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "cardboard__17260158.jpg": {
+    "file": "cardboard__17260158.jpg",
+    "expected_item": "cardboard",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "wallet, billfold, notecase, pocketbook",
+        "p": 0.3531
+      },
+      {
+        "label": "carton",
+        "p": 0.3147
+      },
+      {
+        "label": "binder, ring-binder",
+        "p": 0.0547
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.3531
+    },
+    "expected_bin": "recycling",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "cardboard__27666126.jpg": {
+    "file": "cardboard__27666126.jpg",
+    "expected_item": "cardboard",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "laptop, laptop computer",
+        "p": 0.1627
+      },
+      {
+        "label": "Polaroid camera, Polaroid Land camera",
+        "p": 0.1212
+      },
+      {
+        "label": "hard disc, hard disk, fixed disk",
+        "p": 0.0961
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.1627
+    },
+    "expected_bin": "recycling",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "cardboard__4498122.jpg": {
+    "file": "cardboard__4498122.jpg",
+    "expected_item": "cardboard",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "carton",
+        "p": 0.4055
+      },
+      {
+        "label": "binder, ring-binder",
+        "p": 0.1358
+      },
+      {
+        "label": "envelope",
+        "p": 0.0822
+      }
+    ],
+    "verdict": {
+      "status": "ok",
+      "item": "cardboard",
+      "bin": "recycling",
+      "confidence": 0.4055
+    },
+    "expected_bin": "recycling",
+    "outcome": "correct",
+    "bin_match": true,
+    "sweep": {
+      "0.2": "correct",
+      "0.25": "correct",
+      "0.3": "correct",
+      "0.35": "correct",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "cardboard__4554242.jpg": {
+    "file": "cardboard__4554242.jpg",
+    "expected_item": "cardboard",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "carton",
+        "p": 0.5612
+      },
+      {
+        "label": "file, file cabinet, filing cabinet",
+        "p": 0.114
+      },
+      {
+        "label": "maze, labyrinth",
+        "p": 0.0334
+      }
+    ],
+    "verdict": {
+      "status": "ok",
+      "item": "cardboard",
+      "bin": "recycling",
+      "confidence": 0.5612
+    },
+    "expected_bin": "recycling",
+    "outcome": "correct",
+    "bin_match": true,
+    "sweep": {
+      "0.2": "correct",
+      "0.25": "correct",
+      "0.3": "correct",
+      "0.35": "correct",
+      "0.45": "correct"
+    },
+    "backend": "cpu-node"
+  },
+  "coffee_cup__15707334.jpg": {
+    "file": "coffee_cup__15707334.jpg",
+    "expected_item": "coffee_cup",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "cup",
+        "p": 0.261
+      },
+      {
+        "label": "coffee mug",
+        "p": 0.2475
+      },
+      {
+        "label": "bucket, pail",
+        "p": 0.2386
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.261
+    },
+    "expected_bin": "garbage",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "coffee_cup__19029038.jpg": {
+    "file": "coffee_cup__19029038.jpg",
+    "expected_item": "coffee_cup",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "bucket, pail",
+        "p": 0.4968
+      },
+      {
+        "label": "cup",
+        "p": 0.0963
+      },
+      {
+        "label": "ashcan, trash can, garbage can, wastebin, ash bin, ash-bin, ashbin, dustbin, trash barrel, trash bin",
+        "p": 0.0351
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.4968
+    },
+    "expected_bin": "garbage",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "coffee_cup__2286977.jpg": {
+    "file": "coffee_cup__2286977.jpg",
+    "expected_item": "coffee_cup",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "ashcan, trash can, garbage can, wastebin, ash bin, ash-bin, ashbin, dustbin, trash barrel, trash bin",
+        "p": 0.1777
+      },
+      {
+        "label": "water bottle",
+        "p": 0.0636
+      },
+      {
+        "label": "rain barrel",
+        "p": 0.0486
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.1777
+    },
+    "expected_bin": "garbage",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "coffee_cup__3832249.jpg": {
+    "file": "coffee_cup__3832249.jpg",
+    "expected_item": "coffee_cup",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "Band Aid",
+        "p": 0.154
+      },
+      {
+        "label": "coffee mug",
+        "p": 0.1445
+      },
+      {
+        "label": "pill bottle",
+        "p": 0.1106
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.154
+    },
+    "expected_bin": "garbage",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "coffee_cup__7792344.jpg": {
+    "file": "coffee_cup__7792344.jpg",
+    "expected_item": "coffee_cup",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "water bottle",
+        "p": 0.0794
+      },
+      {
+        "label": "perfume, essence",
+        "p": 0.0577
+      },
+      {
+        "label": "candle, taper, wax light",
+        "p": 0.0492
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.0794
+    },
+    "expected_bin": "garbage",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "electronics__16388464.jpg": {
+    "file": "electronics__16388464.jpg",
+    "expected_item": "electronics",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "remote control, remote",
+        "p": 0.1386
+      },
+      {
+        "label": "shopping cart",
+        "p": 0.042
+      },
+      {
+        "label": "running shoe",
+        "p": 0.0359
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.1386
+    },
+    "expected_bin": "ecocentre",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "electronics__19037726.jpg": {
+    "file": "electronics__19037726.jpg",
+    "expected_item": "electronics",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "jigsaw puzzle",
+        "p": 0.905
+      },
+      {
+        "label": "maze, labyrinth",
+        "p": 0.0103
+      },
+      {
+        "label": "running shoe",
+        "p": 0.0062
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.905
+    },
+    "expected_bin": "ecocentre",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "electronics__19335258.jpg": {
+    "file": "electronics__19335258.jpg",
+    "expected_item": "electronics",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "cellular telephone, cellular phone, cellphone, cell, mobile phone",
+        "p": 0.9379
+      },
+      {
+        "label": "hand-held computer, hand-held microcomputer",
+        "p": 0.0134
+      },
+      {
+        "label": "remote control, remote",
+        "p": 0.0095
+      }
+    ],
+    "verdict": {
+      "status": "ok",
+      "item": "electronics",
+      "bin": "ecocentre",
+      "confidence": 0.9379
+    },
+    "expected_bin": "ecocentre",
+    "outcome": "correct",
+    "bin_match": true,
+    "sweep": {
+      "0.2": "correct",
+      "0.25": "correct",
+      "0.3": "correct",
+      "0.35": "correct",
+      "0.45": "correct"
+    },
+    "backend": "cpu-node"
+  },
+  "electronics__27910251__broken.jpg": {
+    "file": "electronics__27910251__broken.jpg",
+    "expected_item": "electronics",
+    "condition": "broken",
+    "top3": [
+      {
+        "label": "comic book",
+        "p": 0.4214
+      },
+      {
+        "label": "jigsaw puzzle",
+        "p": 0.1487
+      },
+      {
+        "label": "buckle",
+        "p": 0.0813
+      }
+    ],
+    "verdict": {
+      "status": "ok",
+      "item": "paper",
+      "bin": "recycling",
+      "confidence": 0.4214
+    },
+    "expected_bin": "ecocentre",
+    "outcome": "faux",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "faux",
+      "0.25": "faux",
+      "0.3": "faux",
+      "0.35": "faux",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "electronics__28266688.jpg": {
+    "file": "electronics__28266688.jpg",
+    "expected_item": "electronics",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "cellular telephone, cellular phone, cellphone, cell, mobile phone",
+        "p": 0.4339
+      },
+      {
+        "label": "reflex camera",
+        "p": 0.0332
+      },
+      {
+        "label": "modem",
+        "p": 0.0276
+      }
+    ],
+    "verdict": {
+      "status": "ok",
+      "item": "electronics",
+      "bin": "ecocentre",
+      "confidence": 0.4339
+    },
+    "expected_bin": "ecocentre",
+    "outcome": "correct",
+    "bin_match": true,
+    "sweep": {
+      "0.2": "correct",
+      "0.25": "correct",
+      "0.3": "correct",
+      "0.35": "correct",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "food_scraps__15450930.jpg": {
+    "file": "food_scraps__15450930.jpg",
+    "expected_item": "food_scraps",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "jigsaw puzzle",
+        "p": 0.1885
+      },
+      {
+        "label": "acorn",
+        "p": 0.172
+      },
+      {
+        "label": "ping-pong ball",
+        "p": 0.0713
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.1885
+    },
+    "expected_bin": "compost",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "food_scraps__27420715.jpg": {
+    "file": "food_scraps__27420715.jpg",
+    "expected_item": "food_scraps",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "jigsaw puzzle",
+        "p": 0.537
+      },
+      {
+        "label": "maze, labyrinth",
+        "p": 0.0305
+      },
+      {
+        "label": "rock python, rock snake, Python sebae",
+        "p": 0.0222
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.537
+    },
+    "expected_bin": "compost",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "food_scraps__30684081.jpg": {
+    "file": "food_scraps__30684081.jpg",
+    "expected_item": "food_scraps",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "lighter, light, igniter, ignitor",
+        "p": 0.4045
+      },
+      {
+        "label": "harmonica, mouth organ, harp, mouth harp",
+        "p": 0.0907
+      },
+      {
+        "label": "wallet, billfold, notecase, pocketbook",
+        "p": 0.0582
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.4045
+    },
+    "expected_bin": "compost",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "food_scraps__8455400.jpg": {
+    "file": "food_scraps__8455400.jpg",
+    "expected_item": "food_scraps",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "stove",
+        "p": 0.1412
+      },
+      {
+        "label": "file, file cabinet, filing cabinet",
+        "p": 0.1398
+      },
+      {
+        "label": "desk",
+        "p": 0.0651
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.1412
+    },
+    "expected_bin": "compost",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "glass_bottle__15574137.jpg": {
+    "file": "glass_bottle__15574137.jpg",
+    "expected_item": "glass_bottle",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "pop bottle, soda bottle",
+        "p": 0.6913
+      },
+      {
+        "label": "water bottle",
+        "p": 0.1986
+      },
+      {
+        "label": "beer bottle",
+        "p": 0.0695
+      }
+    ],
+    "verdict": {
+      "status": "ok",
+      "item": "plastic_bottle",
+      "bin": "recycling",
+      "confidence": 0.6913
+    },
+    "expected_bin": "recycling",
+    "outcome": "faux",
+    "bin_match": true,
+    "sweep": {
+      "0.2": "faux",
+      "0.25": "faux",
+      "0.3": "faux",
+      "0.35": "faux",
+      "0.45": "faux"
+    },
+    "backend": "cpu-node"
+  },
+  "glass_bottle__26791665.jpg": {
+    "file": "glass_bottle__26791665.jpg",
+    "expected_item": "glass_bottle",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "water bottle",
+        "p": 0.4488
+      },
+      {
+        "label": "nipple",
+        "p": 0.1053
+      },
+      {
+        "label": "saltshaker, salt shaker",
+        "p": 0.0811
+      }
+    ],
+    "verdict": {
+      "status": "ok",
+      "item": "plastic_bottle",
+      "bin": "recycling",
+      "confidence": 0.4488
+    },
+    "expected_bin": "recycling",
+    "outcome": "faux",
+    "bin_match": true,
+    "sweep": {
+      "0.2": "faux",
+      "0.25": "faux",
+      "0.3": "faux",
+      "0.35": "faux",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "glass_bottle__3737813.jpg": {
+    "file": "glass_bottle__3737813.jpg",
+    "expected_item": "glass_bottle",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "ballpoint, ballpoint pen, ballpen, Biro",
+        "p": 0.6754
+      },
+      {
+        "label": "fountain pen",
+        "p": 0.0445
+      },
+      {
+        "label": "pencil box, pencil case",
+        "p": 0.0418
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.6754
+    },
+    "expected_bin": "recycling",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "glass_bottle__4113617.jpg": {
+    "file": "glass_bottle__4113617.jpg",
+    "expected_item": "glass_bottle",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "bobsled, bobsleigh, bob",
+        "p": 0.5371
+      },
+      {
+        "label": "running shoe",
+        "p": 0.1273
+      },
+      {
+        "label": "shoe shop, shoe-shop, shoe store",
+        "p": 0.057
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.5371
+    },
+    "expected_bin": "recycling",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "glass_bottle__8287258.jpg": {
+    "file": "glass_bottle__8287258.jpg",
+    "expected_item": "glass_bottle",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "bathtub, bathing tub, bath, tub",
+        "p": 0.3164
+      },
+      {
+        "label": "washbasin, handbasin, washbowl, lavabo, wash-hand basin",
+        "p": 0.0444
+      },
+      {
+        "label": "tub, vat",
+        "p": 0.0402
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.3164
+    },
+    "expected_bin": "recycling",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "metal_can__19354737.jpg": {
+    "file": "metal_can__19354737.jpg",
+    "expected_item": "metal_can",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "bottlecap",
+        "p": 0.9283
+      },
+      {
+        "label": "wine bottle",
+        "p": 0.0152
+      },
+      {
+        "label": "typewriter keyboard",
+        "p": 0.012
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.9283
+    },
+    "expected_bin": "recycling",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "metal_can__3008.jpg": {
+    "file": "metal_can__3008.jpg",
+    "expected_item": "metal_can",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "loudspeaker, speaker, speaker unit, loudspeaker system, speaker system",
+        "p": 0.1969
+      },
+      {
+        "label": "car wheel",
+        "p": 0.0871
+      },
+      {
+        "label": "switch, electric switch, electrical switch",
+        "p": 0.036
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.1969
+    },
+    "expected_bin": "recycling",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "metal_can__5703498.jpg": {
+    "file": "metal_can__5703498.jpg",
+    "expected_item": "metal_can",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "wine bottle",
+        "p": 0.4144
+      },
+      {
+        "label": "spotlight, spot",
+        "p": 0.1898
+      },
+      {
+        "label": "combination lock",
+        "p": 0.0694
+      }
+    ],
+    "verdict": {
+      "status": "ok",
+      "item": "glass_bottle",
+      "bin": "recycling",
+      "confidence": 0.4144
+    },
+    "expected_bin": "recycling",
+    "outcome": "faux",
+    "bin_match": true,
+    "sweep": {
+      "0.2": "faux",
+      "0.25": "faux",
+      "0.3": "faux",
+      "0.35": "faux",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "metal_can__9289888.jpg": {
+    "file": "metal_can__9289888.jpg",
+    "expected_item": "metal_can",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "seat belt, seatbelt",
+        "p": 0.2616
+      },
+      {
+        "label": "combination lock",
+        "p": 0.0851
+      },
+      {
+        "label": "mouse, computer mouse",
+        "p": 0.0676
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.2616
+    },
+    "expected_bin": "recycling",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "metal_can__9601217.jpg": {
+    "file": "metal_can__9601217.jpg",
+    "expected_item": "metal_can",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "lighter, light, igniter, ignitor",
+        "p": 0.3387
+      },
+      {
+        "label": "pill bottle",
+        "p": 0.071
+      },
+      {
+        "label": "thimble",
+        "p": 0.0332
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.3387
+    },
+    "expected_bin": "recycling",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "paper__3866816.jpg": {
+    "file": "paper__3866816.jpg",
+    "expected_item": "paper",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "pencil box, pencil case",
+        "p": 0.4757
+      },
+      {
+        "label": "wallet, billfold, notecase, pocketbook",
+        "p": 0.0848
+      },
+      {
+        "label": "fountain pen",
+        "p": 0.0652
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.4757
+    },
+    "expected_bin": "recycling",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "paper__4816136.jpg": {
+    "file": "paper__4816136.jpg",
+    "expected_item": "paper",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "radiator",
+        "p": 0.1564
+      },
+      {
+        "label": "freight car",
+        "p": 0.0694
+      },
+      {
+        "label": "chainlink fence",
+        "p": 0.0523
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.1564
+    },
+    "expected_bin": "recycling",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "paper__5010877.jpg": {
+    "file": "paper__5010877.jpg",
+    "expected_item": "paper",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "ballpoint, ballpoint pen, ballpen, Biro",
+        "p": 0.2139
+      },
+      {
+        "label": "fountain pen",
+        "p": 0.157
+      },
+      {
+        "label": "carpenter's kit, tool kit",
+        "p": 0.0505
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.2139
+    },
+    "expected_bin": "recycling",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "paper__518543.jpg": {
+    "file": "paper__518543.jpg",
+    "expected_item": "paper",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "upright, upright piano",
+        "p": 0.2081
+      },
+      {
+        "label": "binder, ring-binder",
+        "p": 0.1099
+      },
+      {
+        "label": "wallet, billfold, notecase, pocketbook",
+        "p": 0.0923
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.2081
+    },
+    "expected_bin": "recycling",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "paper__5505718.jpg": {
+    "file": "paper__5505718.jpg",
+    "expected_item": "paper",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "wallet, billfold, notecase, pocketbook",
+        "p": 0.2311
+      },
+      {
+        "label": "binder, ring-binder",
+        "p": 0.0946
+      },
+      {
+        "label": "purse",
+        "p": 0.0612
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.2311
+    },
+    "expected_bin": "recycling",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "pizza_box__17403901.jpg": {
+    "file": "pizza_box__17403901.jpg",
+    "expected_item": "pizza_box",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "pizza, pizza pie",
+        "p": 0.5962
+      },
+      {
+        "label": "trifle",
+        "p": 0.0767
+      },
+      {
+        "label": "frying pan, frypan, skillet",
+        "p": 0.042
+      }
+    ],
+    "verdict": {
+      "status": "ok",
+      "item": "pizza_box",
+      "bin": "recycling",
+      "confidence": 0.5962
+    },
+    "expected_bin": "recycling",
+    "outcome": "correct",
+    "bin_match": true,
+    "sweep": {
+      "0.2": "correct",
+      "0.25": "correct",
+      "0.3": "correct",
+      "0.35": "correct",
+      "0.45": "correct"
+    },
+    "backend": "cpu-node"
+  },
+  "pizza_box__4109080.jpg": {
+    "file": "pizza_box__4109080.jpg",
+    "expected_item": "pizza_box",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "acorn squash",
+        "p": 0.1755
+      },
+      {
+        "label": "trifle",
+        "p": 0.1094
+      },
+      {
+        "label": "zucchini, courgette",
+        "p": 0.0774
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.1755
+    },
+    "expected_bin": "recycling",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "pizza_box__9353454__soiled.jpg": {
+    "file": "pizza_box__9353454__soiled.jpg",
+    "expected_item": "pizza_box",
+    "condition": "soiled",
+    "top3": [
+      {
+        "label": "pencil box, pencil case",
+        "p": 0.1704
+      },
+      {
+        "label": "wallet, billfold, notecase, pocketbook",
+        "p": 0.1296
+      },
+      {
+        "label": "church, church building",
+        "p": 0.0779
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.1704
+    },
+    "expected_bin": "compost",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "pizza_box__9685241.jpg": {
+    "file": "pizza_box__9685241.jpg",
+    "expected_item": "pizza_box",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "envelope",
+        "p": 0.3958
+      },
+      {
+        "label": "binder, ring-binder",
+        "p": 0.1695
+      },
+      {
+        "label": "wallet, billfold, notecase, pocketbook",
+        "p": 0.051
+      }
+    ],
+    "verdict": {
+      "status": "ok",
+      "item": "paper",
+      "bin": "recycling",
+      "confidence": 0.3958
+    },
+    "expected_bin": "recycling",
+    "outcome": "faux",
+    "bin_match": true,
+    "sweep": {
+      "0.2": "faux",
+      "0.25": "faux",
+      "0.3": "faux",
+      "0.35": "faux",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "pizza_box__9685255.jpg": {
+    "file": "pizza_box__9685255.jpg",
+    "expected_item": "pizza_box",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "file, file cabinet, filing cabinet",
+        "p": 0.1715
+      },
+      {
+        "label": "carton",
+        "p": 0.1017
+      },
+      {
+        "label": "screen, CRT screen",
+        "p": 0.057
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.1715
+    },
+    "expected_bin": "recycling",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "plastic_bottle__15524063.jpg": {
+    "file": "plastic_bottle__15524063.jpg",
+    "expected_item": "plastic_bottle",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "bucket, pail",
+        "p": 0.1495
+      },
+      {
+        "label": "folding chair",
+        "p": 0.0968
+      },
+      {
+        "label": "sombrero",
+        "p": 0.0468
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.1495
+    },
+    "expected_bin": "recycling",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "plastic_bottle__31699476.jpg": {
+    "file": "plastic_bottle__31699476.jpg",
+    "expected_item": "plastic_bottle",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "water bottle",
+        "p": 0.167
+      },
+      {
+        "label": "perfume, essence",
+        "p": 0.1642
+      },
+      {
+        "label": "pop bottle, soda bottle",
+        "p": 0.0777
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.167
+    },
+    "expected_bin": "recycling",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "plastic_bottle__3457243__broken.jpg": {
+    "file": "plastic_bottle__3457243__broken.jpg",
+    "expected_item": "plastic_bottle",
+    "condition": "broken",
+    "top3": [
+      {
+        "label": "gasmask, respirator, gas helmet",
+        "p": 0.1392
+      },
+      {
+        "label": "oxygen mask",
+        "p": 0.1237
+      },
+      {
+        "label": "spotlight, spot",
+        "p": 0.0628
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.1392
+    },
+    "expected_bin": "recycling",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "plastic_bottle__5719820.jpg": {
+    "file": "plastic_bottle__5719820.jpg",
+    "expected_item": "plastic_bottle",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "water bottle",
+        "p": 0.9336
+      },
+      {
+        "label": "pop bottle, soda bottle",
+        "p": 0.0314
+      },
+      {
+        "label": "water jug",
+        "p": 0.0056
+      }
+    ],
+    "verdict": {
+      "status": "ok",
+      "item": "plastic_bottle",
+      "bin": "recycling",
+      "confidence": 0.9336
+    },
+    "expected_bin": "recycling",
+    "outcome": "correct",
+    "bin_match": true,
+    "sweep": {
+      "0.2": "correct",
+      "0.25": "correct",
+      "0.3": "correct",
+      "0.35": "correct",
+      "0.45": "correct"
+    },
+    "backend": "cpu-node"
+  },
+  "plastic_film__13342845.jpg": {
+    "file": "plastic_film__13342845.jpg",
+    "expected_item": "plastic_film",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "prayer rug, prayer mat",
+        "p": 0.7196
+      },
+      {
+        "label": "jigsaw puzzle",
+        "p": 0.1338
+      },
+      {
+        "label": "umbrella",
+        "p": 0.0256
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.7196
+    },
+    "expected_bin": "garbage",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "plastic_film__3683198.jpg": {
+    "file": "plastic_film__3683198.jpg",
+    "expected_item": "plastic_film",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "spider web, spider's web",
+        "p": 0.2033
+      },
+      {
+        "label": "television, television system",
+        "p": 0.1378
+      },
+      {
+        "label": "bubble",
+        "p": 0.0582
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.2033
+    },
+    "expected_bin": "garbage",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "plastic_film__3683199.jpg": {
+    "file": "plastic_film__3683199.jpg",
+    "expected_item": "plastic_film",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "spider web, spider's web",
+        "p": 0.2592
+      },
+      {
+        "label": "garden spider, Aranea diademata",
+        "p": 0.2091
+      },
+      {
+        "label": "leatherback turtle, leatherback, leathery turtle, Dermochelys coriacea",
+        "p": 0.0366
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.2592
+    },
+    "expected_bin": "garbage",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "plastic_film__3683207.jpg": {
+    "file": "plastic_film__3683207.jpg",
+    "expected_item": "plastic_film",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "dragonfly, darning needle, devil's darning needle, sewing needle, snake feeder, snake doctor, mosquito hawk, skeeter hawk",
+        "p": 0.1168
+      },
+      {
+        "label": "window screen",
+        "p": 0.0897
+      },
+      {
+        "label": "garden spider, Aranea diademata",
+        "p": 0.0874
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.1168
+    },
+    "expected_bin": "garbage",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "plastic_film__9222184__broken.jpg": {
+    "file": "plastic_film__9222184__broken.jpg",
+    "expected_item": "plastic_film",
+    "condition": "broken",
+    "top3": [
+      {
+        "label": "sarong",
+        "p": 0.135
+      },
+      {
+        "label": "mailbag, postbag",
+        "p": 0.1214
+      },
+      {
+        "label": "miniskirt, mini",
+        "p": 0.0468
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.135
+    },
+    "expected_bin": "garbage",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "styrofoam__18372333.jpg": {
+    "file": "styrofoam__18372333.jpg",
+    "expected_item": "styrofoam",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "confectionery, confectionary, candy store",
+        "p": 0.1413
+      },
+      {
+        "label": "grocery store, grocery, food market, market",
+        "p": 0.0817
+      },
+      {
+        "label": "dough",
+        "p": 0.0813
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.1413
+    },
+    "expected_bin": "garbage",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "styrofoam__25950834.jpg": {
+    "file": "styrofoam__25950834.jpg",
+    "expected_item": "styrofoam",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "wall clock",
+        "p": 0.1262
+      },
+      {
+        "label": "lighter, light, igniter, ignitor",
+        "p": 0.1157
+      },
+      {
+        "label": "buckle",
+        "p": 0.0762
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.1262
+    },
+    "expected_bin": "garbage",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "styrofoam__33124373.jpg": {
+    "file": "styrofoam__33124373.jpg",
+    "expected_item": "styrofoam",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "bathtub, bathing tub, bath, tub",
+        "p": 0.8351
+      },
+      {
+        "label": "tub, vat",
+        "p": 0.1389
+      },
+      {
+        "label": "washbasin, handbasin, washbowl, lavabo, wash-hand basin",
+        "p": 0.0105
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.8351
+    },
+    "expected_bin": "garbage",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "styrofoam__3892914.jpg": {
+    "file": "styrofoam__3892914.jpg",
+    "expected_item": "styrofoam",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "lens cap, lens cover",
+        "p": 0.9564
+      },
+      {
+        "label": "dung beetle",
+        "p": 0.005
+      },
+      {
+        "label": "reflex camera",
+        "p": 0.0034
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.9564
+    },
+    "expected_bin": "garbage",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "styrofoam__40080589.jpg": {
+    "file": "styrofoam__40080589.jpg",
+    "expected_item": "styrofoam",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "water bottle",
+        "p": 0.0591
+      },
+      {
+        "label": "quill, quill pen",
+        "p": 0.0585
+      },
+      {
+        "label": "padlock",
+        "p": 0.0529
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.0591
+    },
+    "expected_bin": "garbage",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "textile__10557063.jpg": {
+    "file": "textile__10557063.jpg",
+    "expected_item": "textile",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "sweatshirt",
+        "p": 0.0993
+      },
+      {
+        "label": "plastic bag",
+        "p": 0.0565
+      },
+      {
+        "label": "jean, blue jean, denim",
+        "p": 0.0477
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.0993
+    },
+    "expected_bin": "ecocentre",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "textile__11541395.jpg": {
+    "file": "textile__11541395.jpg",
+    "expected_item": "textile",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "wool, woolen, woollen",
+        "p": 0.104
+      },
+      {
+        "label": "sock",
+        "p": 0.0584
+      },
+      {
+        "label": "pillow",
+        "p": 0.0424
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.104
+    },
+    "expected_bin": "ecocentre",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "textile__20604551.jpg": {
+    "file": "textile__20604551.jpg",
+    "expected_item": "textile",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "sweatshirt",
+        "p": 0.1468
+      },
+      {
+        "label": "mailbag, postbag",
+        "p": 0.131
+      },
+      {
+        "label": "backpack, back pack, knapsack, packsack, rucksack, haversack",
+        "p": 0.124
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.1468
+    },
+    "expected_bin": "ecocentre",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "textile__4049148.jpg": {
+    "file": "textile__4049148.jpg",
+    "expected_item": "textile",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "mailbag, postbag",
+        "p": 0.316
+      },
+      {
+        "label": "running shoe",
+        "p": 0.051
+      },
+      {
+        "label": "prayer rug, prayer mat",
+        "p": 0.0499
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.316
+    },
+    "expected_bin": "ecocentre",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  },
+  "textile__4109759.jpg": {
+    "file": "textile__4109759.jpg",
+    "expected_item": "textile",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "Windsor tie",
+        "p": 0.153
+      },
+      {
+        "label": "wool, woolen, woollen",
+        "p": 0.1456
+      },
+      {
+        "label": "sock",
+        "p": 0.0513
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.153
+    },
+    "expected_bin": "ecocentre",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "cpu-node"
+  }
+}

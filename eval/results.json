@@ -6,7 +6,7 @@
     "top3": [
       {
         "label": "bottlecap",
-        "p": 0.277
+        "p": 0.2771
       },
       {
         "label": "pop bottle, soda bottle",
@@ -21,7 +21,7 @@
       "status": "uncertain",
       "item": null,
       "bin": "uncertain",
-      "confidence": 0.277
+      "confidence": 0.2771
     },
     "expected_bin": "recycling",
     "outcome": "incertain",
@@ -33,43 +33,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
-  },
-  "food_scraps__7512979.jpg": {
-    "file": "food_scraps__7512979.jpg",
-    "expected_item": "food_scraps",
-    "condition": "clean",
-    "top3": [
-      {
-        "label": "iron, smoothing iron",
-        "p": 0.0554
-      },
-      {
-        "label": "dumbbell",
-        "p": 0.0543
-      },
-      {
-        "label": "vacuum, vacuum cleaner",
-        "p": 0.036
-      }
-    ],
-    "verdict": {
-      "status": "uncertain",
-      "item": null,
-      "bin": "uncertain",
-      "confidence": 0.0554
-    },
-    "expected_bin": "compost",
-    "outcome": "incertain",
-    "bin_match": false,
-    "sweep": {
-      "0.2": "incertain",
-      "0.25": "incertain",
-      "0.3": "incertain",
-      "0.35": "incertain",
-      "0.45": "incertain"
-    },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "cardboard__11781094.jpg": {
     "file": "cardboard__11781094.jpg",
@@ -105,7 +69,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "cardboard__17260158.jpg": {
     "file": "cardboard__17260158.jpg",
@@ -141,7 +105,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "cardboard__27666126.jpg": {
     "file": "cardboard__27666126.jpg",
@@ -177,7 +141,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "cardboard__4498122.jpg": {
     "file": "cardboard__4498122.jpg",
@@ -213,7 +177,7 @@
       "0.35": "correct",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "cardboard__4554242.jpg": {
     "file": "cardboard__4554242.jpg",
@@ -222,7 +186,7 @@
     "top3": [
       {
         "label": "carton",
-        "p": 0.5612
+        "p": 0.5613
       },
       {
         "label": "file, file cabinet, filing cabinet",
@@ -237,7 +201,7 @@
       "status": "ok",
       "item": "cardboard",
       "bin": "recycling",
-      "confidence": 0.5612
+      "confidence": 0.5613
     },
     "expected_bin": "recycling",
     "outcome": "correct",
@@ -249,7 +213,7 @@
       "0.35": "correct",
       "0.45": "correct"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "coffee_cup__15707334.jpg": {
     "file": "coffee_cup__15707334.jpg",
@@ -285,7 +249,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "coffee_cup__19029038.jpg": {
     "file": "coffee_cup__19029038.jpg",
@@ -321,7 +285,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "coffee_cup__2286977.jpg": {
     "file": "coffee_cup__2286977.jpg",
@@ -357,7 +321,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "coffee_cup__3832249.jpg": {
     "file": "coffee_cup__3832249.jpg",
@@ -393,7 +357,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "coffee_cup__7792344.jpg": {
     "file": "coffee_cup__7792344.jpg",
@@ -429,7 +393,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "electronics__16388464.jpg": {
     "file": "electronics__16388464.jpg",
@@ -465,7 +429,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "electronics__19037726.jpg": {
     "file": "electronics__19037726.jpg",
@@ -501,7 +465,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "electronics__19335258.jpg": {
     "file": "electronics__19335258.jpg",
@@ -537,7 +501,7 @@
       "0.35": "correct",
       "0.45": "correct"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "electronics__27910251__broken.jpg": {
     "file": "electronics__27910251__broken.jpg",
@@ -573,7 +537,7 @@
       "0.35": "faux",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "electronics__28266688.jpg": {
     "file": "electronics__28266688.jpg",
@@ -609,7 +573,7 @@
       "0.35": "correct",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "food_scraps__15450930.jpg": {
     "file": "food_scraps__15450930.jpg",
@@ -645,7 +609,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "food_scraps__27420715.jpg": {
     "file": "food_scraps__27420715.jpg",
@@ -681,7 +645,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "food_scraps__30684081.jpg": {
     "file": "food_scraps__30684081.jpg",
@@ -717,7 +681,43 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
+  },
+  "food_scraps__7512979.jpg": {
+    "file": "food_scraps__7512979.jpg",
+    "expected_item": "food_scraps",
+    "condition": "clean",
+    "top3": [
+      {
+        "label": "iron, smoothing iron",
+        "p": 0.0554
+      },
+      {
+        "label": "dumbbell",
+        "p": 0.0543
+      },
+      {
+        "label": "vacuum, vacuum cleaner",
+        "p": 0.036
+      }
+    ],
+    "verdict": {
+      "status": "uncertain",
+      "item": null,
+      "bin": "uncertain",
+      "confidence": 0.0554
+    },
+    "expected_bin": "compost",
+    "outcome": "incertain",
+    "bin_match": false,
+    "sweep": {
+      "0.2": "incertain",
+      "0.25": "incertain",
+      "0.3": "incertain",
+      "0.35": "incertain",
+      "0.45": "incertain"
+    },
+    "backend": "webgl-page"
   },
   "food_scraps__8455400.jpg": {
     "file": "food_scraps__8455400.jpg",
@@ -753,7 +753,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "glass_bottle__15574137.jpg": {
     "file": "glass_bottle__15574137.jpg",
@@ -789,7 +789,7 @@
       "0.35": "faux",
       "0.45": "faux"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "glass_bottle__26791665.jpg": {
     "file": "glass_bottle__26791665.jpg",
@@ -825,7 +825,7 @@
       "0.35": "faux",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "glass_bottle__3737813.jpg": {
     "file": "glass_bottle__3737813.jpg",
@@ -861,7 +861,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "glass_bottle__4113617.jpg": {
     "file": "glass_bottle__4113617.jpg",
@@ -897,7 +897,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "glass_bottle__8287258.jpg": {
     "file": "glass_bottle__8287258.jpg",
@@ -933,7 +933,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "metal_can__19354737.jpg": {
     "file": "metal_can__19354737.jpg",
@@ -969,7 +969,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "metal_can__3008.jpg": {
     "file": "metal_can__3008.jpg",
@@ -1005,7 +1005,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "metal_can__5703498.jpg": {
     "file": "metal_can__5703498.jpg",
@@ -1041,7 +1041,7 @@
       "0.35": "faux",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "metal_can__9289888.jpg": {
     "file": "metal_can__9289888.jpg",
@@ -1050,7 +1050,7 @@
     "top3": [
       {
         "label": "seat belt, seatbelt",
-        "p": 0.2616
+        "p": 0.2615
       },
       {
         "label": "combination lock",
@@ -1065,7 +1065,7 @@
       "status": "uncertain",
       "item": null,
       "bin": "uncertain",
-      "confidence": 0.2616
+      "confidence": 0.2615
     },
     "expected_bin": "recycling",
     "outcome": "incertain",
@@ -1077,7 +1077,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "metal_can__9601217.jpg": {
     "file": "metal_can__9601217.jpg",
@@ -1113,7 +1113,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "paper__3866816.jpg": {
     "file": "paper__3866816.jpg",
@@ -1149,7 +1149,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "paper__4816136.jpg": {
     "file": "paper__4816136.jpg",
@@ -1162,7 +1162,7 @@
       },
       {
         "label": "freight car",
-        "p": 0.0694
+        "p": 0.0693
       },
       {
         "label": "chainlink fence",
@@ -1185,7 +1185,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "paper__5010877.jpg": {
     "file": "paper__5010877.jpg",
@@ -1221,7 +1221,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "paper__518543.jpg": {
     "file": "paper__518543.jpg",
@@ -1257,7 +1257,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "paper__5505718.jpg": {
     "file": "paper__5505718.jpg",
@@ -1293,7 +1293,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "pizza_box__17403901.jpg": {
     "file": "pizza_box__17403901.jpg",
@@ -1329,7 +1329,7 @@
       "0.35": "correct",
       "0.45": "correct"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "pizza_box__4109080.jpg": {
     "file": "pizza_box__4109080.jpg",
@@ -1365,7 +1365,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "pizza_box__9353454__soiled.jpg": {
     "file": "pizza_box__9353454__soiled.jpg",
@@ -1382,7 +1382,7 @@
       },
       {
         "label": "church, church building",
-        "p": 0.0779
+        "p": 0.078
       }
     ],
     "verdict": {
@@ -1401,7 +1401,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "pizza_box__9685241.jpg": {
     "file": "pizza_box__9685241.jpg",
@@ -1410,7 +1410,7 @@
     "top3": [
       {
         "label": "envelope",
-        "p": 0.3958
+        "p": 0.3959
       },
       {
         "label": "binder, ring-binder",
@@ -1425,7 +1425,7 @@
       "status": "ok",
       "item": "paper",
       "bin": "recycling",
-      "confidence": 0.3958
+      "confidence": 0.3959
     },
     "expected_bin": "recycling",
     "outcome": "faux",
@@ -1437,7 +1437,7 @@
       "0.35": "faux",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "pizza_box__9685255.jpg": {
     "file": "pizza_box__9685255.jpg",
@@ -1473,7 +1473,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "plastic_bottle__15524063.jpg": {
     "file": "plastic_bottle__15524063.jpg",
@@ -1509,7 +1509,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "plastic_bottle__31699476.jpg": {
     "file": "plastic_bottle__31699476.jpg",
@@ -1545,7 +1545,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "plastic_bottle__3457243__broken.jpg": {
     "file": "plastic_bottle__3457243__broken.jpg",
@@ -1581,7 +1581,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "plastic_bottle__5719820.jpg": {
     "file": "plastic_bottle__5719820.jpg",
@@ -1617,7 +1617,7 @@
       "0.35": "correct",
       "0.45": "correct"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "plastic_film__13342845.jpg": {
     "file": "plastic_film__13342845.jpg",
@@ -1653,7 +1653,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "plastic_film__3683198.jpg": {
     "file": "plastic_film__3683198.jpg",
@@ -1666,7 +1666,7 @@
       },
       {
         "label": "television, television system",
-        "p": 0.1378
+        "p": 0.1379
       },
       {
         "label": "bubble",
@@ -1689,7 +1689,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "plastic_film__3683199.jpg": {
     "file": "plastic_film__3683199.jpg",
@@ -1725,7 +1725,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "plastic_film__3683207.jpg": {
     "file": "plastic_film__3683207.jpg",
@@ -1761,7 +1761,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "plastic_film__9222184__broken.jpg": {
     "file": "plastic_film__9222184__broken.jpg",
@@ -1797,7 +1797,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "styrofoam__18372333.jpg": {
     "file": "styrofoam__18372333.jpg",
@@ -1833,7 +1833,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "styrofoam__25950834.jpg": {
     "file": "styrofoam__25950834.jpg",
@@ -1869,7 +1869,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "styrofoam__33124373.jpg": {
     "file": "styrofoam__33124373.jpg",
@@ -1905,7 +1905,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "styrofoam__3892914.jpg": {
     "file": "styrofoam__3892914.jpg",
@@ -1914,7 +1914,7 @@
     "top3": [
       {
         "label": "lens cap, lens cover",
-        "p": 0.9564
+        "p": 0.9563
       },
       {
         "label": "dung beetle",
@@ -1929,7 +1929,7 @@
       "status": "uncertain",
       "item": null,
       "bin": "uncertain",
-      "confidence": 0.9564
+      "confidence": 0.9563
     },
     "expected_bin": "garbage",
     "outcome": "incertain",
@@ -1941,7 +1941,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "styrofoam__40080589.jpg": {
     "file": "styrofoam__40080589.jpg",
@@ -1977,7 +1977,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "textile__10557063.jpg": {
     "file": "textile__10557063.jpg",
@@ -2013,7 +2013,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "textile__11541395.jpg": {
     "file": "textile__11541395.jpg",
@@ -2049,7 +2049,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "textile__20604551.jpg": {
     "file": "textile__20604551.jpg",
@@ -2085,7 +2085,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "textile__4049148.jpg": {
     "file": "textile__4049148.jpg",
@@ -2121,7 +2121,7 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   },
   "textile__4109759.jpg": {
     "file": "textile__4109759.jpg",
@@ -2157,6 +2157,6 @@
       "0.35": "incertain",
       "0.45": "incertain"
     },
-    "backend": "cpu-node"
+    "backend": "webgl-page"
   }
 }

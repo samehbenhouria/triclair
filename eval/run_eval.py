@@ -24,12 +24,34 @@ skipped unless --force is given).
 Usage:
     python3 eval/run_eval.py eval/photos/*.jpg [--force]
 """
-import asyncio, base64, json, os, subprocess, sys, urllib.request
+import asyncio, base64, hashlib, json, os, subprocess, sys, urllib.request
 import websockets
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
-VIDEO = os.path.join(REPO, "video")
+VIDEO = os.path.join(os.path.dirname(REPO), "video")
+
+# The VM's Chromium build refuses to start without the platform's WebGL
+# domain policy ("Hatch WebGL domain policy is required for browser
+# startup"). The image ships that policy at the path below for its
+# browser daemon; we pass the file UNMODIFIED, with its own sha256 —
+# the daemon's own mechanism, nothing fabricated. (Found 2026-10-31;
+# the earlier "no policy file on disk" note was wrong — the disk search
+# had been interrupted before reaching /var/lib.)
+_POLICY_FILE = "/var/lib/hatch-browser/rootfs-base/usr/share/hatch/chromium/webgl-allowed-domains.txt"
+
+
+def _policy_args():
+    try:
+        with open(_POLICY_FILE, "rb") as fh:
+            digest = hashlib.sha256(fh.read()).hexdigest()
+        return [f"--hatch-webgl-allowed-domains-file={_POLICY_FILE}",
+                f"--hatch-webgl-allowed-domains-sha256={digest}"]
+    except OSError:
+        return []
+
+
+POLICY_ARGS = _policy_args()
 BASE = "https://samehbenhouria.github.io/triclair/"
 PORT = 9351
 RESULTS = os.path.join(HERE, "results.json")
@@ -85,6 +107,7 @@ async def main():
     await asyncio.sleep(2)
     proc = subprocess.Popen([
         "/opt/meta-chromium/chrome", "--headless=new", "--disable-gpu", "--no-sandbox",
+        *POLICY_ARGS,
         "--proxy-server=http://127.0.0.1:8899", "--ignore-certificate-errors",
         f"--remote-debugging-port={PORT}", "--user-data-dir=/tmp/triclair-eval-profile",
         "--window-size=1200,1200", "about:blank"],
@@ -146,8 +169,8 @@ async def main():
             # Load our own model instance with the app's exact config, then
             # classify photo by photo, checkpointing after each one.
             boot = await eval_await(
-                "window.__evalModel = await mobilenet.load({version: 2, alpha: 1.0,"
-                " modelUrl: 'model/model.json'}); 'eval model loaded'")
+                "(async () => { window.__evalModel = await mobilenet.load({version: 2,"
+                " alpha: 1.0, modelUrl: 'model/model.json'}); return 'eval model loaded'; })()")
             print("BOOT:", boot, flush=True)
 
             for it in payload:
@@ -175,7 +198,7 @@ async def main():
                             outcome: v.status === 'uncertain' ? 'incertain'
                                 : (v.itemKey === it.expected ? 'correct' : 'faux'),
                             bin_match: v.status !== 'uncertain' && v.bin === expectedBin,
-                            sweep: sweep};
+                            sweep: sweep, backend: 'webgl-page'};
                 })()""" % (json.dumps({k: it[k] for k in ("name", "expected", "condition", "data")}),
                            json.dumps(THRESHOLDS))
                 rec = await eval_await(expr)

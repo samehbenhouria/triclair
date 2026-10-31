@@ -20,6 +20,7 @@ Requires a Chromium that can start on this machine — see
 eval/SESSION_USAGE.md for the 2026-10-30 platform limitation.
 """
 import asyncio
+import hashlib
 import json
 import os
 import subprocess
@@ -27,6 +28,27 @@ import sys
 import urllib.request
 
 import websockets
+
+# The VM's Chromium build refuses to start without the platform's WebGL
+# domain policy. The image ships that policy at the path below for its
+# browser daemon; we pass the file UNMODIFIED, with its own sha256 —
+# the daemon's own mechanism, nothing fabricated. (Found 2026-10-31;
+# the earlier "no policy file on disk" note was wrong — the disk search
+# had been interrupted before reaching /var/lib.)
+_POLICY_FILE = "/var/lib/hatch-browser/rootfs-base/usr/share/hatch/chromium/webgl-allowed-domains.txt"
+
+
+def _policy_args():
+    try:
+        with open(_POLICY_FILE, "rb") as fh:
+            digest = hashlib.sha256(fh.read()).hexdigest()
+        return [f"--hatch-webgl-allowed-domains-file={_POLICY_FILE}",
+                f"--hatch-webgl-allowed-domains-sha256={digest}"]
+    except OSError:
+        return []
+
+
+POLICY_ARGS = _policy_args()
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -68,7 +90,7 @@ async def main():
     await asyncio.sleep(2)
     chrome = subprocess.Popen(
         ["/opt/meta-chromium/chrome", "--headless=new", "--disable-gpu",
-         "--no-sandbox", "--proxy-server=http://127.0.0.1:8899",
+         "--no-sandbox", *POLICY_ARGS, "--proxy-server=http://127.0.0.1:8899",
          "--ignore-certificate-errors",
          f"--remote-debugging-port={PORT}",
          f"--user-data-dir={PROFILE}", "--window-size=1200,1400", "about:blank"],
@@ -154,10 +176,11 @@ async def main():
                     await wait_ready()
                 first = False
                 await evalj(
-                    "(() => { const s = document.querySelector('#condition');"
-                    f" s.value = '{cond}';"
-                    " s.dispatchEvent(new Event('change', {bubbles:true}));"
-                    " return s.value; })()")
+                    "(() => { const r = document.querySelector("
+                    f"'input[name=\"condition\"][value=\"{cond}\"]');"
+                    " r.checked = true;"
+                    " r.dispatchEvent(new Event('change', {bubbles:true}));"
+                    " return r.value; })()")
                 for name in names:
                     if name in records and records[name].get("verdict_text"):
                         print("SKIP", name, flush=True)

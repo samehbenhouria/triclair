@@ -150,11 +150,12 @@ nothing is invented:
 
 ## Screenshots
 
-`docs/screenshots/` documents the gallery status: the current French
-interface is best judged live (link at the top of the Devpost page), and
-fresh captures are produced by `video/capture_shots.py` in the project
-workspace — see `docs/screenshots/README.md` for the measured demo
-verdicts and the capture protocol.
+`docs/screenshots/` holds real captures of the current French
+interface, taken on the deployed app on 2026-10-31: the demo verdicts
+(bottle → recycling 73 %, glass clean/broken, banana → compost 96 %,
+phone → ecocentre 91 %, teddy → honest uncertain), the impact panel,
+and a Montréal session. See `docs/screenshots/README.md` for the
+caption of each frame and what it does and does not show.
 
 ## Honest limitations
 
@@ -173,6 +174,7 @@ verdicts and the capture protocol.
 
 ## What's next
 
-A waste-specific fine-tuned classifier (the measured bottleneck), more
-municipalities' datasets, and a documented in-interface usage session
-(the protocol is written in `eval/SESSION_USAGE.md`).
+A waste-specific fine-tuned classifier (the measured bottleneck) and
+more municipalities' datasets. The documented in-interface usage
+session is done — `eval/SESSION_USAGE.md` (15 photos through the real
+UI: 2 decided, both in the right bin; 13 honest uncertains).

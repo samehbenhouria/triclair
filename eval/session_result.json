@@ -1,0 +1,202 @@
+{
+  "plastic_bottle__7981599.jpg": {
+    "condition": "clean",
+    "verdict_text": "🤔 Incertain: Incertain — On ne devine pasConfiance du modèle : 15%TriClair ne devine pas : un mauvais bac contamine un chargement entier. Le modèle photo n'est pas assez confiant (15 % < 35 %). Utilisez le sélecteur manuel de matière ci-dessous, ou consultez le guide des déchets de Longueuil.",
+    "journal_len_after": 1
+  },
+  "glass_bottle__26791665.jpg": {
+    "condition": "clean",
+    "verdict_text": "➡️ Verdict: Bac bleu — RecyclageConfiance du modèle : 59% — reconnu comme « water bottle »Objet : Bouteille de plastiqueLes contenants de plastique rigide vont au bac bleu à Longueuil. Videz-le, rincez légèrement, gardez le capuchon.",
+    "journal_len_after": 2
+  },
+  "metal_can__9601217.jpg": {
+    "condition": "clean",
+    "verdict_text": "🤔 Incertain: Incertain — On ne devine pasConfiance du modèle : 16%TriClair ne devine pas : un mauvais bac contamine un chargement entier. Le modèle photo n'est pas assez confiant (16 % < 35 %). Utilisez le sélecteur manuel de matière ci-dessous, ou consultez le guide des déchets de Longueuil.",
+    "journal_len_after": 3
+  },
+  "cardboard__11781094.jpg": {
+    "condition": "clean",
+    "verdict_text": "🤔 Incertain: Incertain — On ne devine pasConfiance du modèle : 10%TriClair ne devine pas : un mauvais bac contamine un chargement entier. Le modèle photo n'est pas assez confiant (10 % < 35 %). Utilisez le sélecteur manuel de matière ci-dessous, ou consultez le guide des déchets de Longueuil.",
+    "journal_len_after": 4
+  },
+  "pizza_box__4109080.jpg": {
+    "condition": "clean",
+    "verdict_text": "🤔 Incertain: Incertain — On ne devine pasConfiance du modèle : 17%TriClair ne devine pas : un mauvais bac contamine un chargement entier. Le modèle photo n'est pas assez confiant (17 % < 35 %). Utilisez le sélecteur manuel de matière ci-dessous, ou consultez le guide des déchets de Longueuil.",
+    "journal_len_after": 5
+  },
+  "paper__3866816.jpg": {
+    "condition": "clean",
+    "verdict_text": "🤔 Incertain: Incertain — On ne devine pasConfiance du modèle : 49%TriClair ne devine pas : un mauvais bac contamine un chargement entier. « pencil box, pencil case » n'est pas un objet que TriClair sait trier. Utilisez le sélecteur manuel de matière ci-dessous, ou consultez le guide des déchets de Longueuil.",
+    "journal_len_after": 6
+  },
+  "coffee_cup__2286977.jpg": {
+    "condition": "clean",
+    "verdict_text": "🤔 Incertain: Incertain — On ne devine pasConfiance du modèle : 29%TriClair ne devine pas : un mauvais bac contamine un chargement entier. Le modèle photo n'est pas assez confiant (29 % < 35 %). Utilisez le sélecteur manuel de matière ci-dessous, ou consultez le guide des déchets de Longueuil.",
+    "journal_len_after": 7
+  },
+  "plastic_film__3683199.jpg": {
+    "condition": "clean",
+    "verdict_text": "🤔 Incertain: Incertain — On ne devine pasConfiance du modèle : 16%TriClair ne devine pas : un mauvais bac contamine un chargement entier. Le modèle photo n'est pas assez confiant (16 % < 35 %). Utilisez le sélecteur manuel de matière ci-dessous, ou consultez le guide des déchets de Longueuil.",
+    "journal_len_after": 8
+  },
+  "food_scraps__7512979.jpg": {
+    "condition": "clean",
+    "verdict_text": "🤔 Incertain: Incertain — On ne devine pasConfiance du modèle : 5%TriClair ne devine pas : un mauvais bac contamine un chargement entier. Le modèle photo n'est pas assez confiant (5 % < 35 %). Utilisez le sélecteur manuel de matière ci-dessous, ou consultez le guide des déchets de Longueuil.",
+    "journal_len_after": 9
+  },
+  "styrofoam__40080589.jpg": {
+    "condition": "clean",
+    "verdict_text": "🤔 Incertain: Incertain — On ne devine pasConfiance du modèle : 11%TriClair ne devine pas : un mauvais bac contamine un chargement entier. Le modèle photo n'est pas assez confiant (11 % < 35 %). Utilisez le sélecteur manuel de matière ci-dessous, ou consultez le guide des déchets de Longueuil.",
+    "journal_len_after": 10
+  },
+  "electronics__19335258.jpg": {
+    "condition": "clean",
+    "verdict_text": "➡️ Verdict: Écocentre — Point de dépôtConfiance du modèle : 94% — reconnu comme « cellular telephone, cellular phone, cellphone, cell, mobile phone »Objet : Électronique / téléphone / pileL'électronique, les téléphones et les piles ne vont JAMAIS dans un bac résidentiel — ils contiennent des matières dangereuses et des métaux précieux. Apportez-les à un écocentre ou à un point de dépôt officiel de déchets électroniques (p. ex. Électrobac / reprise en magasin).",
+    "journal_len_after": 11
+  },
+  "textile__10557063.jpg": {
+    "condition": "clean",
+    "verdict_text": "🤔 Incertain: Incertain — On ne devine pasConfiance du modèle : 9%TriClair ne devine pas : un mauvais bac contamine un chargement entier. Le modèle photo n'est pas assez confiant (9 % < 35 %). Utilisez le sélecteur manuel de matière ci-dessous, ou consultez le guide des déchets de Longueuil.",
+    "journal_len_after": 12
+  },
+  "plastic_bottle__3457243__broken.jpg": {
+    "condition": "broken",
+    "verdict_text": "🤔 Incertain: Incertain — On ne devine pasConfiance du modèle : 22%TriClair ne devine pas : un mauvais bac contamine un chargement entier. Le modèle photo n'est pas assez confiant (22 % < 35 %). Utilisez le sélecteur manuel de matière ci-dessous, ou consultez le guide des déchets de Longueuil.",
+    "journal_len_after": 13
+  },
+  "plastic_film__9222184__broken.jpg": {
+    "condition": "broken",
+    "verdict_text": "🤔 Incertain: Incertain — On ne devine pasConfiance du modèle : 16%TriClair ne devine pas : un mauvais bac contamine un chargement entier. Le modèle photo n'est pas assez confiant (16 % < 35 %). Utilisez le sélecteur manuel de matière ci-dessous, ou consultez le guide des déchets de Longueuil.",
+    "journal_len_after": 14
+  },
+  "pizza_box__9353454__soiled.jpg": {
+    "condition": "soiled",
+    "verdict_text": "🤔 Incertain: Incertain — On ne devine pasConfiance du modèle : 25%TriClair ne devine pas : un mauvais bac contamine un chargement entier. Le modèle photo n'est pas assez confiant (25 % < 35 %). Utilisez le sélecteur manuel de matière ci-dessous, ou consultez le guide des déchets de Longueuil.",
+    "journal_len_after": 15
+  },
+  "__panel__": {
+    "impact_text": "\n    📊 Journal d'impact\n    \n      15objets triés\n      1🔵 recyclage\n      0🟤 compost\n      0⚫ ordures\n      1🟠 écocentre\n      87%taux d'incertain\n    \n    \n      Exporter le journal (JSON)\n      Réinitialiser\n    \n    Stocké seulement dans votre navigateur (localStorage). Le taux d'incertain est une fonction, pas un échec : il compte les réponses que TriClair a refusé de deviner.\n  ",
+    "journal": [
+      {
+        "ts": "2026-10-31T01:03:20.568Z",
+        "source": "photo",
+        "city": "longueuil",
+        "item": "unknown",
+        "bin": "uncertain",
+        "confidence": 0.148
+      },
+      {
+        "ts": "2026-10-31T01:03:35.905Z",
+        "source": "photo",
+        "city": "longueuil",
+        "item": "Bouteille de plastique",
+        "bin": "recycling",
+        "confidence": 0.588
+      },
+      {
+        "ts": "2026-10-31T01:03:49.950Z",
+        "source": "photo",
+        "city": "longueuil",
+        "item": "unknown",
+        "bin": "uncertain",
+        "confidence": 0.159
+      },
+      {
+        "ts": "2026-10-31T01:04:02.200Z",
+        "source": "photo",
+        "city": "longueuil",
+        "item": "unknown",
+        "bin": "uncertain",
+        "confidence": 0.103
+      },
+      {
+        "ts": "2026-10-31T01:04:11.066Z",
+        "source": "photo",
+        "city": "longueuil",
+        "item": "unknown",
+        "bin": "uncertain",
+        "confidence": 0.175
+      },
+      {
+        "ts": "2026-10-31T01:04:21.208Z",
+        "source": "photo",
+        "city": "longueuil",
+        "item": "unknown",
+        "bin": "uncertain",
+        "confidence": 0.485
+      },
+      {
+        "ts": "2026-10-31T01:04:33.435Z",
+        "source": "photo",
+        "city": "longueuil",
+        "item": "unknown",
+        "bin": "uncertain",
+        "confidence": 0.293
+      },
+      {
+        "ts": "2026-10-31T01:04:51.197Z",
+        "source": "photo",
+        "city": "longueuil",
+        "item": "unknown",
+        "bin": "uncertain",
+        "confidence": 0.158
+      },
+      {
+        "ts": "2026-10-31T01:05:02.629Z",
+        "source": "photo",
+        "city": "longueuil",
+        "item": "unknown",
+        "bin": "uncertain",
+        "confidence": 0.048
+      },
+      {
+        "ts": "2026-10-31T01:05:17.009Z",
+        "source": "photo",
+        "city": "longueuil",
+        "item": "unknown",
+        "bin": "uncertain",
+        "confidence": 0.108
+      },
+      {
+        "ts": "2026-10-31T01:05:28.558Z",
+        "source": "photo",
+        "city": "longueuil",
+        "item": "Électronique / téléphone / pile",
+        "bin": "ecocentre",
+        "confidence": 0.942
+      },
+      {
+        "ts": "2026-10-31T01:05:39.498Z",
+        "source": "photo",
+        "city": "longueuil",
+        "item": "unknown",
+        "bin": "uncertain",
+        "confidence": 0.085
+      },
+      {
+        "ts": "2026-10-31T01:08:11.032Z",
+        "source": "photo",
+        "city": "longueuil",
+        "item": "unknown",
+        "bin": "uncertain",
+        "confidence": 0.224
+      },
+      {
+        "ts": "2026-10-31T01:08:23.434Z",
+        "source": "photo",
+        "city": "longueuil",
+        "item": "unknown",
+        "bin": "uncertain",
+        "confidence": 0.16
+      },
+      {
+        "ts": "2026-10-31T01:10:35.155Z",
+        "source": "photo",
+        "city": "longueuil",
+        "item": "unknown",
+        "bin": "uncertain",
+        "confidence": 0.249
+      }
+    ]
+  }
+}

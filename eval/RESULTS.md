@@ -1,8 +1,11 @@
 # TriClair — real-photo evaluation results
 
-Measured 2026-10-30 on **60 real, uncurated photos** (Pexels, 5 per item ×
+Measured on **60 real, uncurated photos** (Pexels, 5 per item ×
 12 items; sources in `CREDITS.md`), run through the shipped model and the
-shipped rules engine. Raw per-photo data: `results.json` (top-3 labels +
+shipped rules engine **inside the deployed web page** (2026-10-31,
+`run_eval.py`), and independently replicated the day before on the CPU
+backend (`run_eval_node.js`, preserved as `results_node_cpu.json`).
+Raw per-photo data: `results.json` (top-3 labels +
 probabilities, verdict, expected item/bin, outcome, threshold sweep).
 Every number below is recomputed from `results.json` by `summarize.py` —
 no hand-entered figures, no rounding in our favour (percentages are
@@ -80,7 +83,7 @@ above. A waste-specific classifier (fine-tuned on recycling imagery) is
 the identified fix and is future work; it is not claimed anywhere in the
 current product.
 
-## Method and one declared deviation
+## Method — prescribed route, plus an independent replication
 
 - Photos: first suitable results on each item's Pexels search page —
   real photographs only (AI-bundle results excluded), no cropping, no
@@ -89,17 +92,18 @@ current product.
   Longueuil rule set, condition from the filename convention), the
   vendored MobileNet 2.1.1 package and the vendored weights, loaded with
   the app's exact config (`version: 2, alpha: 1.0, modelUrl`).
-- **Deviation:** the prescribed runner drove the model inside the
-  deployed web page via headless Chromium (`run_eval.py`). Since the
-  2026-10-30 platform restart, this VM's Chromium build refuses to start
-  without the browser-daemon's WebGL domain policy, which is not
-  available to a headless script (verbatim error and attempts:
-  `SESSION_USAGE.md`). The evaluation therefore ran with
-  `run_eval_node.js`: the *same* vendored JS artifacts and weights, the
-  *same* load config, the *same* shipped rules module — on TensorFlow.js's
-  CPU backend in Node, with JPEGs decoded to raw RGB by PIL (MobileNet
-  then applies its own resize/normalization, as it does for an `<img>`).
-  CPU-vs-WebGL arithmetic can move the last decimals of a probability;
-  it does not change which photographs the model fails to recognize.
-  Re-runs of sampled photos reproduced `results.json` exactly (3/3 spot
-  checks, identical records).
+- **Headline run (2026-10-31, `run_eval.py`):** the model loaded inside
+  the real deployed page in headless Chromium (WebGL backend), verdicts
+  produced by the page's own `TriRules.fromLabel`. Reaching this route
+  took one correction, recorded in `SESSION_USAGE.md`: the VM's Chromium
+  needs the platform's WebGL domain policy at startup; the image ships
+  that policy file for its browser daemon, and the scripts pass it
+  unmodified with its own sha256.
+- **Replication (2026-10-30, `run_eval_node.js`):** the same vendored
+  artifacts, load config and rules module on TensorFlow.js's CPU
+  backend in Node (JPEGs decoded to raw RGB by PIL). Preserved as
+  `results_node_cpu.json`. **Concordance: identical outcome, verdict
+  (item + bin), threshold sweep and top-3 label set on 60/60 photos**;
+  52/60 records are identical outright, the other 8 differ only in a
+  probability's fourth decimal (≤ 0.0001). Every figure in this
+  document is therefore confirmed by two independent executions.
